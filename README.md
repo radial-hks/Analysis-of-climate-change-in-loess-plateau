@@ -4,4 +4,4 @@
 #  测试本地图片
 
 
-![黄土高原地图](Analysis-of-climate-change-in-loess-plateau/image/dem.jpg)
+![黄土高原地图](https://github.com/radial-hks/Analysis-of-climate-change-in-loess-plateau/blob/master/image/dem.jpg)

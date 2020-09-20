@@ -82,9 +82,9 @@ new_one = pd.read_csv("/Users/radial/Public/rocket_launch/new_one.csv")
 htgy = pd.read_csv("/Users/radial/Public/rocket_launch/htgy.csv") 
 
 new_one.columns=['区站号', '年', '月', '日', '平均本站气压', '日最高本站气压', '日最低本站气压',
-       '日平均气温', '日最高气温', '日最低气温', '平均相对湿度', '最小相对湿度', '20_20',
-       '平均风速', '最大风速', '最大风速的风向', '极大风速', '极大风速的风向',
-       '日照时数']
+        '日平均气温', '日最高气温', '日最低气温', '平均相对湿度', '最小相对湿度', '20_20',
+        '平均风速', '最大风速', '最大风速的风向', '极大风速', '极大风速的风向',
+        '日照时数']
 
 lake = list()
 for i in  htgy["区站号"].unique():
@@ -92,8 +92,8 @@ for i in  htgy["区站号"].unique():
             if  new_one[new_one["区站号"]==i][new_one["年"]==1980].shape[0]>0:
                 lake.append(i)
                 hy= htgy[htgy["区站号"]==i][['区站号', '年', '月', '日', '日平均气温', '日最高气温', '日最低气温',
-       '20_20', '平均相对湿度', '平均风速', '日照时数']]
+        '20_20', '平均相对湿度', '平均风速', '日照时数']]
                 new = new_one[new_one["区站号"]==i][new_one["年"]==1980][['区站号', '年', '月', '日', '日平均气温', '日最高气温', '日最低气温',
-       '20_20', '平均相对湿度', '平均风速', '日照时数']]
+        '20_20', '平均相对湿度', '平均风速', '日照时数']]
                 res = pd.concat([hy,new],sort=False)
                 res.to_csv("/Users/radial/Public/rocket_launch/"+str(i)+".csv",index=0)
